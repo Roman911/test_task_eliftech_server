@@ -19,6 +19,11 @@ export class ProductsResolver {
     return this.productsService.product(productID)
   }
 
+  @Query(() => [CreateProductDto])
+  async products(@Args('shop') shop: string) {
+    return this.productsService.findAll(shop)
+  }
+
   @Mutation(() => CreateProductDto)
   async createProduct(@Args('input') input: ProductInput) {
     return this.productsService.saveProduct(input)

@@ -18,6 +18,10 @@ export class ProductService {
     return this.productModel.findById(productID).exec()
   }
 
+  async findAll(shop: string): Promise<Product[]> {
+    return this.productModel.find({ shop }).exec()
+  }
+
   async saveProduct(createProductDto: ProductInput): Promise<Product> {
 
     return await this.productModel.create(createProductDto)
