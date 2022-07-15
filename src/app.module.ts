@@ -2,8 +2,13 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo'
 import { Module } from "@nestjs/common"
 import { GraphQLModule } from '@nestjs/graphql'
 import { MongooseModule } from '@nestjs/mongoose'
+<<<<<<< HEAD
 //import { ServeStaticModule } from '@nestjs/serve-static'
 //import { join } from 'path'
+=======
+import { ServeStaticModule } from '@nestjs/serve-static'
+import { join } from 'path'
+>>>>>>> 1d710545e8809184e17bf184432d3ea839d396e3
 import { ConfigModule } from '@nestjs/config'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'

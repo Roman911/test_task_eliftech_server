@@ -10,7 +10,11 @@ export class Product {
   @Prop()
   description: string
   @Prop()
+<<<<<<< HEAD
   price: string
+=======
+  price: number
+>>>>>>> 1d710545e8809184e17bf184432d3ea839d396e3
   @Prop()
   shop: string
   @Prop()
