@@ -10,7 +10,7 @@ export class Product {
   @Prop()
   description: string
   @Prop()
-  price: number
+  price: string
   @Prop()
   shop: string
   @Prop()

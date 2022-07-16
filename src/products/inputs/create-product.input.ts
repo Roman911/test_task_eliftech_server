@@ -6,8 +6,8 @@ export class ProductInput {
   name: string
   @Field()
   description: string
-  @Field((type) => Int)
-  price: number
+  @Field()
+  price: string
   @Field()
   shop: string
   @Field()

@@ -6,7 +6,7 @@ type CreateProductDto {
   _id: String!
   name: String!
   description: String!
-  price: Int!
+  price: String!
   shop: String!
   img: String!
   last_seen: DateTime
@@ -44,7 +44,7 @@ type Mutation {
 input ProductInput {
   name: String!
   description: String!
-  price: Int!
+  price: String!
   shop: String!
   img: String!
 }

@@ -8,8 +8,8 @@ export class CreateProductDto {
   name: string
   @Field()
   description: string
-  @Field(() => Int)
-  price: number
+  @Field()
+  price: string
   @Field()
   shop: string
   @Field()
