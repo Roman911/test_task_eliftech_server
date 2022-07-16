@@ -14,7 +14,6 @@ export class ProductService {
   ) { }
 
   async product(productID: string): Promise<Product> {
-
     return this.productModel.findById(productID).exec()
   }
 
@@ -23,7 +22,6 @@ export class ProductService {
   }
 
   async saveProduct(createProductDto: ProductInput): Promise<Product> {
-
     return await this.productModel.create(createProductDto)
   }
 }

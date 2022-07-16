@@ -18,13 +18,27 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 """
 scalar DateTime
 
+type CreateUserDto {
+  _id: String!
+  address: String!
+  email: String!
+  phone: String!
+  name: String!
+  totalPrice: String!
+  products: [CreateProductDto!]!
+  last_seen: DateTime!
+  createdAt: DateTime!
+}
+
 type Query {
   product(productID: String!): CreateProductDto!
   products(shop: String!): [CreateProductDto!]!
+  users(search: String!): [CreateUserDto!]!
 }
 
 type Mutation {
   createProduct(input: ProductInput!): CreateProductDto!
+  createUser(input: UserInput!): CreateUserDto!
 }
 
 input ProductInput {
@@ -33,4 +47,13 @@ input ProductInput {
   price: Int!
   shop: String!
   img: String!
+}
+
+input UserInput {
+  address: String!
+  email: String!
+  phone: String!
+  name: String!
+  totalPrice: String!
+  products: [String!]!
 }
