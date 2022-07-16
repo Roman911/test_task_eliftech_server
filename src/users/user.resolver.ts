@@ -5,6 +5,7 @@ import { UserService } from './users.service'
 import { CreateUserDto } from './dto/create-user.dto'
 import { User, UserDocument } from "./users.schema"
 import { UserInput } from './inputs/create-user.input'
+import { SearchInput } from './inputs/search-user.input'
 
 @Resolver()
 export class UserResolver {
@@ -15,8 +16,8 @@ export class UserResolver {
   ) { }
 
   @Query(() => [CreateUserDto])
-  async users(@Args('search') search: string) {
-    return this.userService.findAll(search)
+  async users(@Args('input') input: SearchInput) {
+    return this.userService.findAll(input)
   }
 
   @Mutation(() => CreateUserDto)

@@ -33,7 +33,13 @@ type CreateUserDto {
 type Query {
   product(productID: String!): CreateProductDto!
   products(shop: String!): [CreateProductDto!]!
-  users(search: String!): [CreateUserDto!]!
+  users(input: SearchInput!): [CreateUserDto!]!
+}
+
+input SearchInput {
+  order: String!
+  email: String!
+  phone: String!
 }
 
 type Mutation {
